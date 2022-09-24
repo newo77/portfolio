@@ -1,0 +1,31 @@
+.nav-list {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.nav-list .nav-items {
+  margin-right: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.nav-list .nav-itemsa {
+  letter-spacing: 1.2px;
+}
+.nav-list .nav-items:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+.nav-list .nav-items:hover {
+  border-bottom: 2px solid rgb(32, 121, 255);
+  color: aqua;
+}
+
+article {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 30vh;
+  padding-left: 28px;
+}/*# sourceMappingURL=navbar.css.map */
