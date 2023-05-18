@@ -1,0 +1,30 @@
+.container_homepage_title {
+  padding-top: 20rem;
+  z-index: 1;
+  padding-left: 10%;
+  position: absolute;
+
+  .homepage_title {
+    font-family: sans-serif;
+    color: white;
+    width: 100%;
+    font-size: 48px;
+    margin: auto;
+    line-height: 90px;
+
+    .red_title {
+      color: red;
+    }
+  }
+
+  .btn_contact_homepage {
+    border: none;
+    background-color: red;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    width: 170px;
+    font-weight: 700;
+    color: white;
+  }
+}
