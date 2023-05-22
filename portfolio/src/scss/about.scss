@@ -1,0 +1,36 @@
+.container_section_about {
+  padding-top: 15rem;
+
+  .title_about {
+    text-align: center;
+    color: red;
+    font-family: sans-serif;
+  }
+  .container_section_grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 49% 2% 49%;
+    padding-top: 50px;
+
+    .image_about {
+      width: 250px;
+      height: 250px;
+      border-radius: 5px;
+    }
+    .border {
+      background-color: black;
+      height: 100%;
+      display: flex;
+      margin-top: auto;
+      align-items: center;
+      width: 2px;
+    }
+    .container_span_about {
+      display: grid;
+      padding-left: 70px;
+      align-items: center;
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 .container_homepage_title {
-  padding-top: 20rem;
+  margin-top: 20rem;
   z-index: 1;
   padding-left: 10%;
-  position: absolute;
+  position: relative;
 
   .homepage_title {
     font-family: sans-serif;
@@ -26,5 +26,19 @@
     width: 170px;
     font-weight: 700;
     color: white;
+  }
+
+  .Logo_icon_bootstrap {
+    color: white;
+    padding-top: 110px;
+    display: flex;
+    gap: 50px;
+
+    .link_logo {
+      color: white;
+      .logo_scale {
+        scale: 2;
+      }
+    }
   }
 }
