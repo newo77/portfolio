@@ -1,0 +1,22 @@
+.container_section_project {
+  position: relative;
+  z-index: 2;
+  padding-top: 15rem;
+
+  .title_project {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .container_project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px;
+    gap: 20px;
+    .image_project {
+      width: 350px;
+      margin: auto;
+      border-radius: 25px;
+    }
+  }
+}

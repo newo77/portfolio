@@ -1,0 +1,27 @@
+.footer {
+  margin-top: 150px;
+  background-color: #272727;
+  position: relative;
+  z-index: 7;
+  height: 200px;
+
+  .title_footer {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .icon_footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    color: white;
+
+    .link_logo_footer {
+      color: white;
+      scale: 1.5;
+    }
+  }
+}

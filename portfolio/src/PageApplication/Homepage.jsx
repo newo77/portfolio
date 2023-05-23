@@ -3,7 +3,7 @@ import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 function Homepage() {
   return (
-    <div className="container_homepage_title">
+    <div id="home" className="container_homepage_title">
       <h1 className="homepage_title">
         Hi,
         <br />

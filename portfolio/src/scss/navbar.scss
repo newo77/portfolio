@@ -1,7 +1,7 @@
 .container_navbar {
   background-color: #272727;
   position: fixed;
-  z-index: 2;
+  z-index: 999;
   top: 0;
   width: 100vw;
   .navbar_children {
@@ -14,6 +14,14 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+
+      .list_menu.active {
+        border-bottom: 3px solid red;
+      }
+      .link_navbar {
+        color: white;
+        text-decoration: none;
+      }
     }
   }
 }

@@ -4,3 +4,7 @@
 @import "./scss/navbar.scss";
 @import "./scss/homepage.scss";
 @import "./scss/about.scss";
+@import "./scss/skills.scss";
+@import "./scss/projects.scss";
+@import "./scss/contact.scss"; 
+@import "./scss/footer.scss";
