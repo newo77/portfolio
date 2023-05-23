@@ -1,44 +1,134 @@
 .container_homepage_title {
-  margin-top: 20rem;
   z-index: 1;
-  padding-left: 10%;
+  padding: 20rem 10% 5% 10%;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-  .homepage_title {
-    font-family: sans-serif;
-    color: white;
-    width: 100%;
-    font-size: 48px;
-    margin: auto;
-    line-height: 90px;
-
-    .red_title {
-      color: red;
-    }
-  }
-
-  .btn_contact_homepage {
-    border: none;
-    background-color: red;
-    padding: 20px;
-    border-radius: 15px;
-    font-family: sans-serif;
-    width: 170px;
-    font-weight: 700;
-    color: white;
-  }
-
-  .Logo_icon_bootstrap {
-    color: white;
-    padding-top: 110px;
-    display: flex;
-    gap: 50px;
-
-    .link_logo {
+  .container_section_presentation {
+    .homepage_title {
+      font-family: sans-serif;
       color: white;
-      .logo_scale {
-        scale: 2;
+      width: 100%;
+      font-size: 48px;
+      margin: auto;
+      line-height: 90px;
+
+      .red_title {
+        color: red;
+      }
+
+      .title_wrapper {
+        position: relative;
+        height: 1.3em;
+        overflow: hidden;
+      }
+
+      .title_item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        animation: slide-up 2s infinite;
+      }
+
+      .title_item.active {
+        opacity: 1;
+        animation: slide-up 2s infinite, fade 0.5s ease-in-out;
+      }
+
+      @keyframes change-text {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        25%,
+        75% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    .btn_contact_homepage {
+      border: none;
+      margin-top: 30px;
+      background-color: red;
+      padding: 20px;
+      border-radius: 15px;
+      font-family: sans-serif;
+      width: 170px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .Logo_icon_bootstrap {
+      color: white;
+      padding-top: 110px;
+      display: flex;
+      gap: 50px;
+
+      .link_logo {
+        color: white;
+        .logo_scale {
+          scale: 2;
+        }
       }
     }
   }
+  .hexagon_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ajustez la hauteur selon vos besoins */
+  }
+  
+  .hexagon_rotate {
+    position: relative;
+    width: 260px; /* Ajustez la taille selon vos besoins */
+    height: 300px; /* Ajustez la taille selon vos besoins */
+    transform: rotate(45deg);
+  }
+  
+  .hexagon_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      25% 0%,
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      25% 100%,
+      0% 50%
+    );
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+  }
+  
+  .image_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+  }
+  
+  .image_presentation {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Ajoutez d'autres styles CSS selon vos besoins */
+  
 }

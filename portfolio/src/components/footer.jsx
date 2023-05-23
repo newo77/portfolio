@@ -25,7 +25,7 @@ function Footer() {
         </a>
       </div>
       <div className="copyright_footer">
-        <FaCopyright></FaCopyright> - <b>2023</b> copyright right reserved
+        <FaCopyright></FaCopyright> <b>2023</b> copyright all right reserved
 
       </div>
     </div>
