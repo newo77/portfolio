@@ -56,7 +56,7 @@ function Skills() {
   ];
 
   return (
-    <div id="skills" className="container_section_skills">
+    <section id="skills" className="container_section_skills">
       <h1 className="title_skills">Skills</h1>
       <div className="container_icon_skills">
         {data.map((item, index) => (
@@ -66,7 +66,7 @@ function Skills() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,11 +1,12 @@
 .container_section_skills {
   position: relative;
   z-index: 2;
-  padding: 15rem 10px 10px 10px;
-
+  padding: 0 7% 15rem 7%;
+  
   .title_skills {
     text-align: center;
     color: rgb(255, 255, 255);
+    font-size: 36px;
     font-family: sans-serif;
   }
   .container_icon_skills {
@@ -21,11 +22,11 @@
       justify-content: center;
       border-bottom: 2px solid red;
       margin: auto;
-      width: 250px;
+      width: 50%;
       align-items: center;
       gap: 10px;
       scale: 1.5;
-      .logo_react{
+      .logo_react {
         scale: 1.3;
       }
     }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -15,10 +16,24 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Vous pouvez ajouter ici la logique pour traiter les données du formulaire
-    console.log(formData);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/contact",
+        formData
+      );
+
+      if (response.status === 200) {
+        console.log("E-mail envoyé avec succès");
+      } else {
+        console.error("Erreur lors de l'envoi de l'e-mail");
+      }
+    } catch (error) {
+      console.error("Erreur lors de l'envoi de l'e-mail :", error);
+    }
+
     setFormData({
       name: "",
       email: "",
@@ -27,7 +42,7 @@ function ContactForm() {
   };
 
   return (
-    <div id="contact" className="container_section_contact">
+    <section id="contact" className="container_section_contact">
       <h1 className="title_contact">Contact</h1>
       <form className="form_contact" onSubmit={handleSubmit}>
         <div className="container_input">
@@ -62,9 +77,11 @@ function ContactForm() {
             onChange={handleChange}
           />
         </div>
-        <button className="btn_contact_form" type="submit">Send</button>
+        <button className="btn_contact_form" type="submit">
+          Send
+        </button>
       </form>
-    </div>
+    </section>
   );
 }
 

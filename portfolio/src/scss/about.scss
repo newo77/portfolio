@@ -1,11 +1,12 @@
 .container_section_about {
   position: relative;
   z-index: 2;
-  padding: 10rem;
+  padding: 0 10% 15rem 10%;
 
   .title_about {
     text-align: center;
     color: rgb(255, 255, 255);
+    font-size: 36px;
     font-family: sans-serif;
   }
   .container_section_grid {
@@ -15,9 +16,7 @@
     padding-top: 50px;
 
     .image_about {
-      width: 250px;
-      height: 250px;
-      border-radius: 5px;
+      width: 90%;
     }
     .border {
       background-color: rgb(255, 255, 255);
@@ -29,6 +28,8 @@
     }
     .container_span_about {
       display: grid;
+      font-family: sans-serif;
+      font-size: large;
       padding: 50px 130px 0px 30px;
       align-items: center;
       color: white;

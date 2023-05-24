@@ -1,8 +1,9 @@
 import React from "react";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 
 function Projects() {
   return (
-    <div id="projects" className="container_section_project">
+    <section id="projects" className="container_section_project">
       <h1 className="title_project">Projects</h1>
       <div className="flex_container">
         <div className="container_project">
@@ -38,7 +39,14 @@ function Projects() {
           />
         </div>
       </div>
-    </div>
+      <div className="container_download">
+        <a className="download_file" href="/downloads/cv_dev_fullstack.pdf" download>
+          <div className="wrapper_btn">
+            <FaCloudDownloadAlt className="svg_download"></FaCloudDownloadAlt> Download CV
+          </div>
+        </a>
+      </div>
+    </section>
   );
 }
 

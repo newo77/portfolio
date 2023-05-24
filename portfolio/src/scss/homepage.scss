@@ -1,6 +1,6 @@
 .container_homepage_title {
   z-index: 1;
-  padding: 20rem 10% 5% 10%;
+  padding: 20rem 15% 15rem 13%;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -65,6 +65,11 @@
       width: 170px;
       font-weight: 700;
       color: white;
+
+      .reference_contact {
+        text-decoration: none;
+        color: white;
+      }
     }
 
     .Logo_icon_bootstrap {
@@ -81,54 +86,10 @@
       }
     }
   }
-  .hexagon_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ajustez la hauteur selon vos besoins */
-  }
-  
-  .hexagon_rotate {
-    position: relative;
-    width: 260px; /* Ajustez la taille selon vos besoins */
-    height: 300px; /* Ajustez la taille selon vos besoins */
-    transform: rotate(45deg);
-  }
-  
-  .hexagon_inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(
-      25% 0%,
-      75% 0%,
-      100% 50%,
-      75% 100%,
-      25% 100%,
-      0% 50%
-    );
-    background-color: rgba(255, 255, 255, 0.8);
-    overflow: hidden;
-  }
-  
-  .image_wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg);
-  }
-  
+
   .image_presentation {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 70%;
+    border-radius: 70%;
+    justify-self: center;
   }
-  
-  /* Ajoutez d'autres styles CSS selon vos besoins */
-  
 }

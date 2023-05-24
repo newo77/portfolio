@@ -13,72 +13,73 @@ function Homepage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 2000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, [titles.length]);
 
   return (
-    <div id="home" className="container_homepage_title">
-      <div className="container_section_presentation">
-        <h1 className="homepage_title">
-          Hi,
-          <br />
-          I'm <b className="red_title">OWEN</b>
-          <br />
-          <div className="title_wrapper">
-            {titles.map((title, index) => (
-              <span
-                key={index}
-                className={`title_item ${index === titleIndex ? "active" : ""}`}
-              >
-                {title}
-              </span>
-            ))}
-          </div>
-        </h1>
-        <button className="btn_contact_homepage">CONTACT</button>
-        <div className="Logo_icon_bootstrap">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link_logo"
-            href="https://www.linkedin.com/in/owen-dayes-31ba01223/"
-          >
-            <FaLinkedin className="logo_scale" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link_logo"
-            href="/"
-          >
-            <FaInstagram className="logo_scale" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link_logo"
-            href="https://github.com/newo77"
-          >
-            <FaGithub className="logo_scale" />
-          </a>
-        </div>
-      </div>
-      <div className="hexagon_container">
-        <div className="hexagon_rotate">
-          <div className="hexagon_inner">
-            <div className="image_wrapper">
-              <img
-                className="image_presentation"
-                src="https://www.fredzone.org/wp-content/uploads/2022/04/Nezuko-Demon-Slayer-1200x900.webp"
-                alt="nezukooo"
-              />
+    <section id="home">
+      <div className="container_homepage_title">
+        <div className="container_section_presentation">
+          <h1 className="homepage_title">
+            Hi,
+            <br />
+            I'm <b className="red_title">OWEN</b>
+            <br />
+            <div className="title_wrapper">
+              {titles.map((title, index) => (
+                <span
+                  key={index}
+                  className={`title_item ${
+                    index === titleIndex ? "active" : ""
+                  }`}
+                >
+                  {title}
+                </span>
+              ))}
             </div>
+          </h1>
+          <button className="btn_contact_homepage">
+            <a className="reference_contact" href="#contact">
+              CONTACT
+            </a>
+          </button>
+          <div className="Logo_icon_bootstrap">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link_logo"
+              href="https://www.linkedin.com/in/owen-dayes-31ba01223/"
+            >
+              <FaLinkedin className="logo_scale" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link_logo"
+              href="/"
+            >
+              <FaInstagram className="logo_scale" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link_logo"
+              href="https://github.com/newo77"
+            >
+              <FaGithub className="logo_scale" />
+            </a>
           </div>
         </div>
+
+        <img
+          className="image_presentation"
+          src="https://media.licdn.com/dms/image/D4E03AQE6tCS8gQYUAQ/profile-displayphoto-shrink_800_800/0/1682785675401?e=1690416000&v=beta&t=AEq_hiH7tVvdPxLFgbIQ08iOtxlDq7NDseM7_LI3FTw"
+          alt="nezukooo"
+        />
       </div>
-    </div>
+    </section>
   );
 }
 
