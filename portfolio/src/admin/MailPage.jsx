@@ -1,37 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const MailPage = () => {
   const [mails, setMails] = useState([]);
-  const location = useLocation();
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const name = searchParams.get('name');
-    const email = searchParams.get('email');
-    const description = searchParams.get('description');
-
-    // Create a new mail object with the form data
-    const newMail = {
-      name: name || '',
-      email: email || '',
-      description: description || '',
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3001/contacts");
+        setMails(response.data);
+      } catch (error) {
+        console.log("error =>", error);
+      }
     };
 
-    // Add the new mail object to the mails array
-    setMails((prevMails) => [...prevMails, newMail]);
-  }, [location]);
+    fetchData();
+  }, []);
+
+  // FAIRE EN CSS LA BARRE DE SCROLL
 
   return (
-    <div className='container_mail'>
-      <h1 className='title_mail'>Consultation des courriers électroniques</h1>
-      {mails.map((mail, index) => (
-        <div key={index}>
-          <p>Nom: {mail.name}</p>
-          <p>Email: {mail.email}</p>
-          <p>Description: {mail.description}</p>
-        </div>
-      ))}
+    <div className="container_mail">
+      <h1 className="title_mail">📧 MAIL VIA FORMULAIRE DE CONTACT 📧</h1>
+      <table className="mail_table">
+        <thead className="head_table">
+          <tr>
+            <th className="row_table_header">Nom</th>
+            <th className="row_table_header">Email</th>
+            <th className="row_table_header">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mails.map((mail, index) => (
+            <tr className="row_table_container" key={index}>
+              <td className="row_table">{mail.name}</td>
+              <td className="row_table">{mail.email}</td>
+              <td className="row_table">{mail.description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

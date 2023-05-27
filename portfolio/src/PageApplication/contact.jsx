@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import axios from "axios"
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -7,8 +7,6 @@ function ContactForm() {
     email: "",
     description: "",
   });
-
-  const history = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -20,22 +18,25 @@ function ContactForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    // Redirect to MailPage with form data as URL parameters
-    history(`/mail?name=${formData.name}&email=${formData.email}&description=${formData.description}`);
-
-    setFormData({
-      name: "",
-      email: "",
-      description: "",
-    });
+  
+    try {
+      await axios.post('http://localhost:3001/contacts', formData);
+      console.log('Données du formulaire envoyées avec succès');
+      setFormData({
+        name: "",
+        email: "",
+        description: "",
+      });
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi des données du formulaire:', error);
+    }
   };
-
+  
   return (
     <section id="contact" className="container_section_contact">
       <h1 className="title_contact">Contact</h1>
       <form className="form_contact" onSubmit={handleSubmit}>
-      <div className="container_input">
+        <div className="container_input">
           <input
             className="input"
             type="text"

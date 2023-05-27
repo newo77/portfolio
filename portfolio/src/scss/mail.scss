@@ -1,0 +1,45 @@
+.title_mail {
+  padding: 10rem 10% 10% 10%;
+  color: white;
+  text-align: center;
+  position: relative;
+  font-family: sans-serif;
+  z-index: 2;
+}
+
+.container_mail {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .title_mail {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .mail_table {
+    width: 100%;
+    border-collapse: collapse;
+
+    .head_table {
+      color: white;
+      background-color: darkorchid;
+      height: 30px;
+      border: 1px solid darkorchid;
+    }
+
+    .row_table_container {
+      line-break: anywhere;
+      .row_table {
+        background-color: #f2f2f2;
+        width: 12%;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+}
