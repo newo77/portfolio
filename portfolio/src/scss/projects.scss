@@ -3,11 +3,20 @@
   z-index: 2;
   padding: 0 10% 15rem 10%;
 
+  @media (max-width: 1300px) {
+    padding: 0;
+    padding-bottom: 7rem;
+  }
+
   .title_project {
     font-size: 36px;
     color: white;
     text-align: center;
     font-family: sans-serif;
+
+    @media (max-width: 1200px) {
+      padding: 2rem;
+    }
   }
 
   .flex_container {
@@ -18,10 +27,25 @@
       grid-template-columns: repeat(3, 1fr);
       padding: 60px;
       gap: 20px;
+
+      @media (max-width: 1300px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 720px) {
+        padding: 2rem;
+
+        display: block;
+      }
       .image_project {
         width: 350px;
         margin: auto;
         border-radius: 25px;
+
+        @media (max-width: 1200px) {
+          width: 100%;
+          padding-bottom: 1rem;
+        }
       }
     }
   }
@@ -44,7 +68,7 @@
         align-items: center;
         padding: 20px;
 
-        .svg_download{
+        .svg_download {
           scale: 1.6;
         }
       }

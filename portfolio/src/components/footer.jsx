@@ -4,7 +4,6 @@ import { FaLinkedin, FaInstagram, FaGithub, FaCopyright } from "react-icons/fa";
 function Footer() {
   return (
     <div className="footer">
-      <h1 className="title_footer">Owen</h1>
       <div className="icon_footer">
         <a
           target="blank"
@@ -26,7 +25,6 @@ function Footer() {
       </div>
       <div className="copyright_footer">
         <FaCopyright></FaCopyright> <b>2023</b> copyright all right reserved
-
       </div>
     </div>
   );

@@ -2,6 +2,11 @@
   position: relative;
   z-index: 2;
   padding: 0 7% 15rem 7%;
+
+  @media (max-width: 1200px) {
+    padding: 0 0 7rem 0;
+
+  }
   
   .title_skills {
     text-align: center;
@@ -16,6 +21,11 @@
     padding-top: 61px;
     gap: 60px;
     grid-template-columns: 1fr 1fr;
+    
+    @media (max-width: 792px) {
+    display: flex;
+    flex-direction: column;
+    }
 
     .icons_skills {
       display: flex;

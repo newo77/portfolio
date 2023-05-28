@@ -3,6 +3,11 @@
   z-index: 2;
   padding: 0 10% 15rem 10%;
 
+  @media (max-width: 1300px) {
+    padding-bottom: 60px;
+    padding: 0;
+  }
+
   .title_about {
     text-align: center;
     color: rgb(255, 255, 255);
@@ -15,8 +20,18 @@
     grid-template-columns: 49% 2% 49%;
     padding-top: 50px;
 
+    @media (max-width: 1200px) {
+      display: block;
+    }
+
     .image_about {
       width: 90%;
+
+      @media (max-width: 1200px) {
+        width: 80%;
+        display: flex;
+        margin: auto;
+      }
     }
     .border {
       background-color: rgb(255, 255, 255);
@@ -35,6 +50,19 @@
       color: white;
       grid-template-columns: 1fr;
       gap: 25px;
+
+      @media (max-width: 1200px) {
+        display: block;
+        padding: 50px 40px 7rem 40px;
+        align-items: center;
+      }
+
+      .under_title_about {
+        @media (max-width: 1200px) {
+          text-align: center;
+          padding-bottom: 2rem;
+        }
+      }
     }
   }
 }

@@ -3,7 +3,11 @@
   background-color: #272727;
   position: relative;
   z-index: 7;
-  height: 200px;
+  height: 90px;
+
+  @media (max-width: 1200px) {
+    margin: 0;
+  }
 
   .title_footer {
     color: white;

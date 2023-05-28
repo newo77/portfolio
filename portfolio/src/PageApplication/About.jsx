@@ -13,7 +13,7 @@ function About() {
           />
           <div className="border"></div>
           <span className="container_span_about">
-            <h2>Hello</h2>
+            <h2 className="under_title_about">Hello</h2>
             <p>
               My name is Owen Dayes, a young full-stack web and mobile developer
               passionate about coding since childhood. I excel in using diverse
