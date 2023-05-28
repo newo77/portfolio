@@ -2,13 +2,16 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 const app = express();
+require("dotenv").config();
+
+// Reste du code de votre serveur
 
 // Configuration de la connexion à la base de données MySQL
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "user",
-  password: "root",
-  database: "portfolio",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 });
 
 // établit la connexion
