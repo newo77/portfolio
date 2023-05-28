@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios"
+import axios from "axios";
+
+import { BiMailSend } from "react-icons/bi";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -7,6 +9,7 @@ function ContactForm() {
     email: "",
     description: "",
   });
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -18,20 +21,23 @@ function ContactForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     try {
-      await axios.post('http://localhost:3001/contacts', formData);
-      console.log('Données du formulaire envoyées avec succès');
+      await axios.post("http://localhost:3001/contacts", formData);
       setFormData({
         name: "",
         email: "",
         description: "",
       });
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
     } catch (error) {
-      console.error('Erreur lors de l\'envoi des données du formulaire:', error);
+      console.error("Erreur lors de l'envoi des données du formulaire:", error);
     }
   };
-  
+
   return (
     <section id="contact" className="container_section_contact">
       <h1 className="title_contact">Contact</h1>
@@ -42,6 +48,7 @@ function ContactForm() {
             type="text"
             id="name"
             name="name"
+            required
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
@@ -50,6 +57,7 @@ function ContactForm() {
         <div className="container_input">
           <input
             className="input"
+            required
             type="email"
             id="email"
             placeholder="email"
@@ -64,6 +72,7 @@ function ContactForm() {
             id="description"
             placeholder="Describe your question"
             name="description"
+            required
             value={formData.description}
             onChange={handleChange}
           />
@@ -72,6 +81,12 @@ function ContactForm() {
           Send
         </button>
       </form>
+      {showPopup && (
+        <div className={`pop_up_sending ${showPopup ? "show" : ""}`}>
+          <BiMailSend></BiMailSend>
+          <p className="text_pop_up_sending">Message Sending</p>
+        </div>
+      )}
     </section>
   );
 }

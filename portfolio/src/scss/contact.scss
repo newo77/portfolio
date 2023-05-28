@@ -1,9 +1,7 @@
 .container_section_contact {
   position: relative;
   z-index: 2;
-  padding: 0 10% 10rem 10%;
-
-  
+  padding: 0 10% 14rem 10%;
 
   .title_contact {
     text-align: center;
@@ -46,6 +44,33 @@
       justify-content: center;
       position: absolute;
       left: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .pop_up_sending {
+    position: absolute;
+    background-color: seagreen;
+    z-index: 2;
+    width: 12rem;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    color: white;
+    align-items: center;
+    opacity: 0;
+
+    &.show {
+      transition: opacity 0.7s ease-in-out;
+      gap: 10px;
+      opacity: 1;
+    }
+
+    .text_pop_up_sending {
+      font-family: sans-serif;
     }
   }
 }

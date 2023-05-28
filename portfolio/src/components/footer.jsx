@@ -12,7 +12,7 @@ function Footer() {
         >
           <FaLinkedin className="logo_scale" />
         </a>
-        <a target="blank" className="link_logo_footer" href="/">
+        <a target="blank" className="link_logo_footer" href="https://www.instagram.com/_newo_/">
           <FaInstagram className="logo_scale" />
         </a>
         <a

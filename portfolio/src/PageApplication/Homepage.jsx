@@ -58,7 +58,7 @@ function Homepage() {
               target="_blank"
               rel="noopener noreferrer"
               className="link_logo"
-              href="/"
+              href="https://www.instagram.com/_newo_/"
             >
               <FaInstagram className="logo_scale" />
             </a>
