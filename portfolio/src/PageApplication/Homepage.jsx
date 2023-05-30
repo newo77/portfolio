@@ -8,9 +8,10 @@ function Homepage() {
     "WEB DESIGNER",
     "LOGO DESIGNER",
     "UI/UX DESIGNER",
+    "MOBILE DEVELOPER",
   ];
 
-  const image_pdp = "https://media.licdn.com/dms/image/D4E03AQE6tCS8gQYUAQ/profile-displayphoto-shrink_200_200/0/1682785675401?e=1691020800&v=beta&t=E-Gs2cQzLq5uRk8EvSunI3XdOVuY6OGM0U0PJODgJoM"
+  const image_pdp = "https://media.licdn.com/dms/image/D4E03AQE6tCS8gQYUAQ/profile-displayphoto-shrink_800_800/0/1682785675401?e=1691020800&v=beta&t=x_m2aBP28Efce4x2mbdmwX-VSnUDpw4qUXtNBgiFCZo"
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,6 +22,7 @@ function Homepage() {
   }, [titles.length]);
 
   return (
+    
     <section id="home">
       <div className="container_homepage_title">
         <div className="container_section_presentation">

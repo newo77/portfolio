@@ -1,3 +1,5 @@
+/* Général */
+
 * {
   margin: 0;
 }
@@ -20,6 +22,15 @@ canvas {
     background-color: black
     ;
   }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fade-in.active {
+  opacity: 1;
 }
 
 

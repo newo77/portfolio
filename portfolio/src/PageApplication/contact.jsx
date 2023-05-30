@@ -1,9 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import { BiMailSend } from "react-icons/bi";
 
 function ContactForm() {
+  const [isActive, setIsActive] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.querySelector("#contact");
+      const position = aboutSection.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (position < screenHeight) {
+        setIsActive(true);
+      } else {
+        setIsActive(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,7 +60,12 @@ function ContactForm() {
   };
 
   return (
-    <section id="contact" className="container_section_contact">
+    <section
+      id="contact"
+      className={`container_section_contact ${
+        isActive ? "fade-in active" : "fade-in"
+      }`}
+    >
       <h1 className="title_contact">Contact</h1>
       <form className="form_contact" onSubmit={handleSubmit}>
         <div className="container_input">
