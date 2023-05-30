@@ -8,7 +8,7 @@ function About() {
         <div className="container_section_grid">
           <img
             className="image_about"
-            src="https://media.licdn.com/dms/image/D4E03AQE6tCS8gQYUAQ/profile-displayphoto-shrink_800_800/0/1682785675401?e=1690416000&v=beta&t=AEq_hiH7tVvdPxLFgbIQ08iOtxlDq7NDseM7_LI3FTw"
+            src="/downloads/about.jpg"
             alt="nezukooo"
           />
           <div className="border"></div>

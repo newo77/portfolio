@@ -39,6 +39,17 @@
         text-align: left;
         padding: 10px;
         border: 1px solid #ccc;
+
+        .deleting_table {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          border: none;
+          color: red;
+          justify-content: center;
+          margin: auto;
+          cursor: pointer;
+        }
       }
     }
   }

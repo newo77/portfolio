@@ -10,6 +10,8 @@ function Homepage() {
     "UI/UX DESIGNER",
   ];
 
+  const image_pdp = "https://media.licdn.com/dms/image/D4E03AQE6tCS8gQYUAQ/profile-displayphoto-shrink_200_200/0/1682785675401?e=1691020800&v=beta&t=E-Gs2cQzLq5uRk8EvSunI3XdOVuY6OGM0U0PJODgJoM"
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
@@ -75,7 +77,7 @@ function Homepage() {
 
         <img
           className="image_presentation"
-          src="https://media.licdn.com/dms/image/D4E03AQE6tCS8gQYUAQ/profile-displayphoto-shrink_800_800/0/1682785675401?e=1690416000&v=beta&t=AEq_hiH7tVvdPxLFgbIQ08iOtxlDq7NDseM7_LI3FTw"
+          src={image_pdp}
           alt="nezukooo"
         />
       </div>

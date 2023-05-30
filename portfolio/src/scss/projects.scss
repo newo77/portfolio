@@ -37,14 +37,53 @@
 
         display: block;
       }
-      .image_project {
-        width: 350px;
-        margin: auto;
-        border-radius: 25px;
 
-        @media (max-width: 1200px) {
+      .card {
+        position: relative;
+        perspective: 1000px;
+
+        .image_project {
           width: 100%;
-          padding-bottom: 1rem;
+          margin: auto;
+          border-radius: 25px;
+          transition: 1s;
+          height: 100%;
+          object-fit: cover;
+        }
+        &:hover > .card_overlay {
+          opacity: 1;
+        }
+        .card_overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: white;
+          opacity: 0;
+          transition: opacity 0.5s;
+
+          .card_text {
+            font-size: 24px;
+            text-align: center;
+            font-family: sans-serif;
+
+            .link_card_text {
+              text-decoration: none;
+              color: white;
+            }
+
+            .description_card_text {
+              padding-top: 10px;
+              font-size: 1rem;
+              font-family: sans-serif;
+            }
+          }
         }
       }
     }

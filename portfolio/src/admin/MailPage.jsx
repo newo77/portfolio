@@ -51,7 +51,7 @@ const MailPage = () => {
               <td className="row_table">{mail.email}</td>
               <td className="row_table">{mail.description}</td>
               <td className="row_table">
-                <button onClick={() => handleDeleteMail(mail.id)}>
+                <button className="deleting_table" onClick={() => handleDeleteMail(mail.id)}>
                  <FiTrash></FiTrash> Supprimer
                 </button>
               </td>
