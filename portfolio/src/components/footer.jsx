@@ -12,7 +12,11 @@ function Footer() {
         >
           <FaLinkedin className="logo_scale" />
         </a>
-        <a target="blank" className="link_logo_footer" href="https://www.instagram.com/_newo_/">
+        <a
+          target="blank"
+          className="link_logo_footer"
+          href="https://www.instagram.com/_newo_/"
+        >
           <FaInstagram className="logo_scale" />
         </a>
         <a
@@ -23,6 +27,9 @@ function Footer() {
           <FaGithub className="logo_scale" />
         </a>
       </div>
+      <p className="informations_contact">
+        Dayesowendev@gmail.com - 07 72 29 32 55
+      </p>
       <div className="copyright_footer">
         <FaCopyright></FaCopyright> <b>2023</b> copyright all right reserved
       </div>

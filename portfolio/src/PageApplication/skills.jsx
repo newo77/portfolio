@@ -9,7 +9,13 @@ import {
   FaVuejs,
   FaBootstrap,
 } from "react-icons/fa";
-import { SiJavascript, SiMysql } from "react-icons/si";
+import {
+  SiJavascript,
+  SiMysql,
+  SiAdobeillustrator,
+  SiAdobepremierepro,
+  SiAdobexd,
+} from "react-icons/si";
 
 function Skills() {
   const [isActive, setIsActive] = useState(false);
@@ -53,6 +59,10 @@ function Skills() {
       value: "ReactJs",
     },
     {
+      icon: <FaReact></FaReact>,
+      value: "React-Native",
+    },
+    {
       icon: <FaPhp></FaPhp>,
       value: "PHP",
     },
@@ -75,6 +85,19 @@ function Skills() {
     {
       icon: <FaBootstrap></FaBootstrap>,
       value: "Bootstrap",
+    },
+    {
+      icon: <SiAdobeillustrator></SiAdobeillustrator>,
+      value: "Illustrator",
+    },
+
+    {
+      icon: <SiAdobepremierepro></SiAdobepremierepro>,
+      value: "Première Pro",
+    },
+    {
+      icon: <SiAdobexd></SiAdobexd>,
+      value: "Adobe XD",
     },
   ];
 

@@ -34,7 +34,7 @@ function About() {
         <div className="container_section_grid">
           <img
             className="image_about"
-            src="/downloads/about.jpg"
+            src="/pictures/about.jpg"
             alt="about"
           />
           <div className="border"></div>

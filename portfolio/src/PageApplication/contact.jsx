@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 import { BiMailSend } from "react-icons/bi";
 
@@ -44,7 +43,9 @@ function ContactForm() {
     event.preventDefault();
 
     try {
-      await axios.post("http://localhost:3001/contacts", formData);
+      const mailtoLink = generateMailtoLink(formData);
+      window.open(mailtoLink);
+
       setFormData({
         name: "",
         email: "",
@@ -58,6 +59,17 @@ function ContactForm() {
       console.error("Erreur lors de l'envoi des données du formulaire:", error);
     }
   };
+
+  function generateMailtoLink(formData) {
+    const { name, email, description } = formData;
+    const subject = encodeURIComponent("Prise de contact pour projet / renseignement");
+    const body = encodeURIComponent(`
+      Name: ${name}
+      Email: ${email}
+      Description: ${description}
+    `);
+    return `mailto:dayesowendev@gmail.com?subject=${subject}&body=${body}`;
+  }
 
   return (
     <section
@@ -110,7 +122,7 @@ function ContactForm() {
       {showPopup && (
         <div className={`pop_up_sending ${showPopup ? "show" : ""}`}>
           <BiMailSend></BiMailSend>
-          <p className="text_pop_up_sending">Message Sending</p>
+          <p className="text_pop_up_sending">Redirect to Mail</p>
         </div>
       )}
     </section>

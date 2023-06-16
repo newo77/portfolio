@@ -2,7 +2,7 @@
   background-color: #272727;
   position: relative;
   z-index: 7;
-  height: 90px;
+  height: 160px;
 
   @media (max-width: 1200px) {
     margin: 0;
@@ -12,7 +12,15 @@
     color: white;
     font-family: sans-serif;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 50px;
+  }
+
+  .informations_contact {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    padding-top: 1rem;
+    font-size: 13px;
   }
 
   .icon_footer {
@@ -23,8 +31,22 @@
     color: white;
 
     .link_logo_footer {
+      text-decoration: none;
       color: white;
       scale: 1.5;
+      border: 1px solid white;
+      margin: 7px;
+      border-radius: 43px;
+      display: flex;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .logo_scale {
+        margin: 6px;
+      }
     }
   }
   .copyright_footer {

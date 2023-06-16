@@ -1,0 +1,15 @@
+.container_page_not_found {
+  position: relative;
+  z-index: 999;
+  margin-top: 20rem;
+  color: white;
+  text-align: center;
+
+  .text_not_found{
+    margin-top: 1rem;
+  }
+
+  .redirect_to_homepage{
+    margin-top: 1rem;
+  }
+}
